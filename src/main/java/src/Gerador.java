@@ -2,6 +2,7 @@ package src;
 
 import java.nio.file.Paths;
 
+// Classe responsável por gerar a classe AnalisadorLéxico
 public class Gerador {
 	public static void main(String[] args) {
 		String rootPath = Paths.get("").toAbsolutePath().toString();

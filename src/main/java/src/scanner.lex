@@ -1,14 +1,16 @@
 package src;
 %%
 %{
-	private void imprimir(String descricao, String lexema){
+	private Token token(String tipoToken){
 
-		System.out.println(lexema + "-" + descricao);
+		return new Token(tipoToken);
 	}
 %}
 
 %class AnalisadorLexico
-%type void
+%function getToken 
+%type Token
+
 
 BRANCO = [\ \n\r\t\f]
 ID = [_|a-z|A-Z][a-z|A-Z|0-9_]*
@@ -16,31 +18,33 @@ SOMA = "+"
 SUBTRAI = "-"
 MULTI = "*"
 DIVID = "/"
+EQUALS = "="
 INTEIRO = 0|[1-9][0-9]*
-PARENTESES = [(|)]*
 
 
 %%
 
-"Start"			{imprimir("Identificador de inicio da classe main", yytext());}
-"End"			{imprimir("Identificador de encerramento da classe main", yytext());}
-"Print"   		{imprimir("Função de leitura de identificador", yytext());}
-"Write"   		{imprimir("Função de escrita de identificador", yytext());}
-";"             {imprimir("Caractere de encerramento de instrução", yytext());}
-"Declare"		{imprimir("Identificador de declaração de variáveis", yytext());}
-"Float"   		{imprimir("Tipo float", yytext());}
-"Integer"       {imprimir("Tipo integer", yytext());}
-"Char"          {imprimir("Tipo char", yytext());}
-"String"        {imprimir("Tipo string", yytext());}
-"if"			{imprimir("Palavra reservada", yytext());}
-"then"			{imprimir("Palavra reservada", yytext());}
-{BRANCO}		{imprimir("Espaço em branco ", yytext());}
-{ID}			{imprimir("Identificador ", yytext());}
-{SOMA}			{imprimir("Operador de soma ", yytext());}
-{SUBTRAI}		{imprimir("Operador de subtração", yytext());}
-{MULTI}			{imprimir("Operador de multiplicação", yytext());}
-{DIVID}			{imprimir("Operador de divisão", yytext());} 
-{INTEIRO}		{imprimir("Numero inteiro ", yytext());}
-{PARENTESES}    {imprimir("Abertura/fechamento de parênteses", yytext());}
+"Start"			{return token("START");}
+"End"			{return token("END");}
+"Print"   		{return token("FUNC_PRINT");}
+"Write"   		{return token("FUNC_WRITE");}
+";"             {return token("CLOSE_SEQUENCE");}
+"Declare"		{return token("TYPE_DECLARE");}
+"Float"   		{return token("TYPE_FLOAT");}
+"Integer"       {return token("TYPE_INTEGER");}
+"Char"          {return token("TYPE_CHAR");}
+"String"        {return token("TYPE_STRING");}
+"if"			{return token("IF");}
+"then"			{return token("THEN");}
+{ID}			{return token("IDENT");}
+{EQUALS}		{return token("EQUALS");}
+{SOMA}			{return token("SUM");}
+{SUBTRAI}		{return token("SUB");}
+{MULTI}			{return token("MULT");}
+{DIVID}			{return token("DIVID");} 
+{INTEIRO}		{return token("NUM");}
+"("    			{return token("OPEN");}
+")"    			{return token("CLOSE");}
+{BRANCO}		{return token("BLANKSPACE");}
 
-. { throw new RuntimeException("Caractere invalido" + yytext()); }
+. {return token("INVALID");}

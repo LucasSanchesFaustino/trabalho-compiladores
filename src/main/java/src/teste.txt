@@ -1,0 +1,7 @@
+Start
+	
+	Float teste;
+	
+	teste=teste+2;
+	
+End;

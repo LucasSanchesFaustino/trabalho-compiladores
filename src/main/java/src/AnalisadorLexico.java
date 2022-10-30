@@ -61,14 +61,15 @@ class AnalisadorLexico {
   private static final int [] ZZ_CMAP_BLOCKS = zzUnpackcmap_blocks();
 
   private static final String ZZ_CMAP_BLOCKS_PACKED_0 =
-    "\11\0\2\1\1\2\2\1\22\0\1\1\7\0\2\3"+
-    "\1\4\1\5\1\0\1\6\1\0\1\7\1\10\11\11"+
-    "\1\0\1\12\5\0\2\13\1\14\1\15\1\16\1\17"+
-    "\2\13\1\20\6\13\1\21\2\13\1\22\3\13\1\23"+
-    "\3\13\4\0\1\13\1\0\1\24\1\13\1\25\1\26"+
-    "\1\27\1\30\1\31\1\32\1\33\2\13\1\34\1\13"+
-    "\1\35\1\36\2\13\1\37\1\13\1\40\6\13\1\0"+
-    "\1\41\10\0\1\2\u01a2\0\2\2\326\0\u0100\2";
+    "\11\0\2\1\1\2\2\1\22\0\1\1\7\0\1\3"+
+    "\1\4\1\5\1\6\1\0\1\7\1\0\1\10\1\11"+
+    "\11\12\1\0\1\13\1\0\1\14\3\0\2\15\1\16"+
+    "\1\17\1\20\1\21\2\15\1\22\6\15\1\23\2\15"+
+    "\1\24\3\15\1\25\3\15\4\0\1\15\1\0\1\26"+
+    "\1\15\1\27\1\30\1\31\1\32\1\33\1\34\1\35"+
+    "\2\15\1\36\1\15\1\37\1\40\2\15\1\41\1\15"+
+    "\1\42\6\15\1\0\1\15\10\0\1\2\u01a2\0\2\2"+
+    "\326\0\u0100\2";
 
   private static int [] zzUnpackcmap_blocks() {
     int [] result = new int[1024];
@@ -95,13 +96,13 @@ class AnalisadorLexico {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\1\1\2\1\3\1\1\1\4\1\5\1\6\1\7"+
-    "\2\10\1\11\24\12\1\13\3\12\1\14\7\12\1\15"+
-    "\10\12\1\16\1\12\1\17\1\20\1\12\1\21\2\12"+
-    "\1\22\1\23\1\24";
+    "\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7"+
+    "\1\10\2\11\1\12\1\13\23\14\1\15\3\14\1\16"+
+    "\7\14\1\17\7\14\1\20\1\14\1\21\1\14\1\22"+
+    "\1\23\1\14\1\24\2\14\1\25\1\26\1\27";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[63];
+    int [] result = new int[65];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -126,17 +127,18 @@ class AnalisadorLexico {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\42\0\42\0\104\0\42\0\42\0\42\0\42"+
-    "\0\42\0\146\0\42\0\210\0\252\0\314\0\356\0\u0110"+
-    "\0\u0132\0\u0154\0\u0176\0\u0198\0\u01ba\0\u01dc\0\u01fe\0\u0220"+
-    "\0\u0242\0\u0264\0\u0286\0\u02a8\0\u02ca\0\u02ec\0\u030e\0\210"+
-    "\0\u0330\0\u0352\0\u0374\0\210\0\u0396\0\u03b8\0\u03da\0\u03fc"+
-    "\0\u041e\0\u0440\0\u0462\0\210\0\u0484\0\u04a6\0\u04c8\0\u04ea"+
-    "\0\u050c\0\u052e\0\u0550\0\u0572\0\210\0\u0594\0\210\0\210"+
-    "\0\u05b6\0\210\0\u05d8\0\u05fa\0\210\0\210\0\210";
+    "\0\0\0\43\0\43\0\43\0\43\0\43\0\43\0\43"+
+    "\0\43\0\43\0\106\0\43\0\43\0\151\0\214\0\257"+
+    "\0\322\0\365\0\u0118\0\u013b\0\u015e\0\u0181\0\u01a4\0\u01c7"+
+    "\0\u01ea\0\u020d\0\u0230\0\u0253\0\u0276\0\u0299\0\u02bc\0\u02df"+
+    "\0\151\0\u0302\0\u0325\0\u0348\0\151\0\u036b\0\u038e\0\u03b1"+
+    "\0\u03d4\0\u03f7\0\u041a\0\u043d\0\151\0\u0460\0\u0483\0\u04a6"+
+    "\0\u04c9\0\u04ec\0\u050f\0\u0532\0\151\0\u0555\0\151\0\u0578"+
+    "\0\151\0\151\0\u059b\0\151\0\u05be\0\u05e1\0\151\0\151"+
+    "\0\151";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[63];
+    int [] result = new int[65];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -161,43 +163,41 @@ class AnalisadorLexico {
   private static final String ZZ_TRANS_PACKED_0 =
     "\1\2\1\3\1\0\1\4\1\5\1\6\1\7\1\10"+
     "\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20"+
-    "\1\21\1\22\1\23\1\24\7\14\1\25\4\14\1\26"+
-    "\1\27\45\0\1\4\35\0\1\4\10\0\2\12\40\0"+
-    "\2\14\1\0\27\14\10\0\2\14\1\0\17\14\1\30"+
-    "\7\14\10\0\2\14\1\0\14\14\1\31\12\14\10\0"+
-    "\2\14\1\0\22\14\1\32\4\14\10\0\2\14\1\0"+
-    "\21\14\1\33\5\14\10\0\2\14\1\0\22\14\1\34"+
-    "\4\14\10\0\2\14\1\0\24\14\1\35\2\14\10\0"+
-    "\2\14\1\0\25\14\1\36\1\14\10\0\2\14\1\0"+
-    "\24\14\1\37\2\14\10\0\2\14\1\0\15\14\1\40"+
-    "\11\14\10\0\2\14\1\0\17\14\1\41\7\14\3\0"+
-    "\1\4\4\0\2\14\1\0\26\14\1\27\10\0\2\14"+
-    "\1\0\11\14\1\42\15\14\10\0\2\14\1\0\12\14"+
-    "\1\43\14\14\10\0\2\14\1\0\13\14\1\44\13\14"+
-    "\10\0\2\14\1\0\23\14\1\45\3\14\10\0\2\14"+
-    "\1\0\25\14\1\46\1\14\10\0\2\14\1\0\20\14"+
-    "\1\47\6\14\10\0\2\14\1\0\11\14\1\50\12\14"+
-    "\1\51\2\14\10\0\2\14\1\0\20\14\1\52\6\14"+
-    "\10\0\2\14\1\0\14\14\1\53\12\14\10\0\2\14"+
-    "\1\0\24\14\1\54\2\14\10\0\2\14\1\0\21\14"+
-    "\1\55\5\14\10\0\2\14\1\0\11\14\1\56\15\14"+
-    "\10\0\2\14\1\0\14\14\1\57\12\14\10\0\2\14"+
-    "\1\0\22\14\1\60\4\14\10\0\2\14\1\0\24\14"+
-    "\1\61\2\14\10\0\2\14\1\0\20\14\1\62\6\14"+
-    "\10\0\2\14\1\0\25\14\1\63\1\14\10\0\2\14"+
-    "\1\0\22\14\1\40\4\14\10\0\2\14\1\0\11\14"+
-    "\1\64\15\14\10\0\2\14\1\0\25\14\1\65\1\14"+
-    "\10\0\2\14\1\0\16\14\1\66\10\14\10\0\2\14"+
-    "\1\0\25\14\1\67\1\14\10\0\2\14\1\0\25\14"+
-    "\1\70\1\14\10\0\2\14\1\0\22\14\1\71\4\14"+
-    "\10\0\2\14\1\0\14\14\1\72\12\14\10\0\2\14"+
-    "\1\0\24\14\1\73\2\14\10\0\2\14\1\0\14\14"+
-    "\1\74\12\14\10\0\2\14\1\0\16\14\1\75\10\14"+
-    "\10\0\2\14\1\0\14\14\1\76\12\14\10\0\2\14"+
-    "\1\0\24\14\1\77\2\14";
+    "\1\21\1\22\1\23\1\24\1\25\1\26\7\16\1\27"+
+    "\4\16\1\30\54\0\2\13\41\0\2\16\2\0\26\16"+
+    "\11\0\2\16\2\0\17\16\1\31\6\16\11\0\2\16"+
+    "\2\0\14\16\1\32\11\16\11\0\2\16\2\0\22\16"+
+    "\1\33\3\16\11\0\2\16\2\0\21\16\1\34\4\16"+
+    "\11\0\2\16\2\0\22\16\1\35\3\16\11\0\2\16"+
+    "\2\0\24\16\1\36\1\16\11\0\2\16\2\0\25\16"+
+    "\1\37\11\0\2\16\2\0\24\16\1\40\1\16\11\0"+
+    "\2\16\2\0\15\16\1\41\10\16\11\0\2\16\2\0"+
+    "\17\16\1\42\6\16\11\0\2\16\2\0\11\16\1\43"+
+    "\14\16\11\0\2\16\2\0\12\16\1\44\13\16\11\0"+
+    "\2\16\2\0\13\16\1\45\12\16\11\0\2\16\2\0"+
+    "\23\16\1\46\2\16\11\0\2\16\2\0\25\16\1\47"+
+    "\11\0\2\16\2\0\20\16\1\50\5\16\11\0\2\16"+
+    "\2\0\11\16\1\51\12\16\1\52\1\16\11\0\2\16"+
+    "\2\0\20\16\1\53\5\16\11\0\2\16\2\0\14\16"+
+    "\1\54\11\16\11\0\2\16\2\0\24\16\1\55\1\16"+
+    "\11\0\2\16\2\0\21\16\1\56\4\16\11\0\2\16"+
+    "\2\0\11\16\1\57\14\16\11\0\2\16\2\0\14\16"+
+    "\1\60\11\16\11\0\2\16\2\0\22\16\1\61\3\16"+
+    "\11\0\2\16\2\0\24\16\1\62\1\16\11\0\2\16"+
+    "\2\0\20\16\1\63\5\16\11\0\2\16\2\0\25\16"+
+    "\1\64\11\0\2\16\2\0\22\16\1\65\3\16\11\0"+
+    "\2\16\2\0\11\16\1\66\14\16\11\0\2\16\2\0"+
+    "\25\16\1\67\11\0\2\16\2\0\16\16\1\70\7\16"+
+    "\11\0\2\16\2\0\25\16\1\71\11\0\2\16\2\0"+
+    "\25\16\1\72\11\0\2\16\2\0\22\16\1\73\3\16"+
+    "\11\0\2\16\2\0\14\16\1\74\11\16\11\0\2\16"+
+    "\2\0\24\16\1\75\1\16\11\0\2\16\2\0\14\16"+
+    "\1\76\11\16\11\0\2\16\2\0\16\16\1\77\7\16"+
+    "\11\0\2\16\2\0\14\16\1\100\11\16\11\0\2\16"+
+    "\2\0\24\16\1\101\1\16";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[1564];
+    int [] result = new int[1540];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -240,10 +240,10 @@ class AnalisadorLexico {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\1\2\11\1\1\5\11\1\1\1\11\64\1";
+    "\1\0\11\11\1\1\2\11\64\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[63];
+    int [] result = new int[65];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -323,9 +323,9 @@ class AnalisadorLexico {
   private boolean zzEOFDone;
 
   /* user code: */
-	private void imprimir(String descricao, String lexema){
+	private Token token(String tipoToken){
 
-		System.out.println(lexema + "-" + descricao);
+		return new Token(tipoToken);
 	}
 
 
@@ -581,7 +581,7 @@ class AnalisadorLexico {
    * @return the next token.
    * @exception java.io.IOException if any I/O-Error occurs.
    */
-  public void yylex() throws java.io.IOException {
+  public Token getToken() throws java.io.IOException {
     int zzInput;
     int zzAction;
 
@@ -660,110 +660,125 @@ class AnalisadorLexico {
 
       if (zzInput == YYEOF && zzStartRead == zzCurrentPos) {
         zzAtEOF = true;
-        //return null;
+        return token("$");
       }
       else {
         switch (zzAction < 0 ? zzAction : ZZ_ACTION[zzAction]) {
           case 1:
-            { imprimir("Abertura/fechamento de parênteses", yytext());
-            }
-            // fall through
-          case 21: break;
-          case 2:
-            { throw new RuntimeException("Caractere invalido" + yytext());
-            }
-            // fall through
-          case 22: break;
-          case 3:
-            { imprimir("Espaço em branco ", yytext());
-            }
-            // fall through
-          case 23: break;
-          case 4:
-            { imprimir("Operador de multiplicação", yytext());
+            { return token("INVALID");
             }
             // fall through
           case 24: break;
-          case 5:
-            { imprimir("Operador de soma ", yytext());
+          case 2:
+            { return token("BLANKSPACE");
             }
             // fall through
           case 25: break;
-          case 6:
-            { imprimir("Operador de subtração", yytext());
+          case 3:
+            { return token("OPEN");
             }
             // fall through
           case 26: break;
-          case 7:
-            { imprimir("Operador de divisão", yytext());
+          case 4:
+            { return token("CLOSE");
             }
             // fall through
           case 27: break;
-          case 8:
-            { imprimir("Numero inteiro ", yytext());
+          case 5:
+            { return token("MULT");
             }
             // fall through
           case 28: break;
-          case 9:
-            { imprimir("Caractere de encerramento de instrução", yytext());
+          case 6:
+            { return token("SUM");
             }
             // fall through
           case 29: break;
-          case 10:
-            { imprimir("Identificador ", yytext());
+          case 7:
+            { return token("SUB");
             }
             // fall through
           case 30: break;
-          case 11:
-            { imprimir("Palavra reservada", yytext());
+          case 8:
+            { return token("DIVID");
             }
             // fall through
           case 31: break;
-          case 12:
-            { imprimir("Identificador de encerramento da classe main", yytext());
+          case 9:
+            { return token("NUM");
             }
             // fall through
           case 32: break;
-          case 13:
-            { imprimir("Tipo char", yytext());
+          case 10:
+            { return token("CLOSE_SEQUENCE");
             }
             // fall through
           case 33: break;
-          case 14:
-            { imprimir("Tipo float", yytext());
+          case 11:
+            { return token("EQUALS");
             }
             // fall through
           case 34: break;
-          case 15:
-            { imprimir("Função de leitura de identificador", yytext());
+          case 12:
+            { return token("IDENT");
             }
             // fall through
           case 35: break;
-          case 16:
-            { imprimir("Identificador de inicio da classe main", yytext());
+          case 13:
+            { return token("IF");
             }
             // fall through
           case 36: break;
-          case 17:
-            { imprimir("Função de escrita de identificador", yytext());
+          case 14:
+            { return token("END");
             }
             // fall through
           case 37: break;
-          case 18:
-            { imprimir("Tipo string", yytext());
+          case 15:
+            { return token("TYPE_CHAR");
             }
             // fall through
           case 38: break;
-          case 19:
-            { imprimir("Identificador de declaração de variáveis", yytext());
+          case 16:
+            { return token("THEN");
             }
             // fall through
           case 39: break;
-          case 20:
-            { imprimir("Tipo integer", yytext());
+          case 17:
+            { return token("TYPE_FLOAT");
             }
             // fall through
           case 40: break;
+          case 18:
+            { return token("FUNC_PRINT");
+            }
+            // fall through
+          case 41: break;
+          case 19:
+            { return token("START");
+            }
+            // fall through
+          case 42: break;
+          case 20:
+            { return token("FUNC_WRITE");
+            }
+            // fall through
+          case 43: break;
+          case 21:
+            { return token("TYPE_STRING");
+            }
+            // fall through
+          case 44: break;
+          case 22:
+            { return token("TYPE_DECLARE");
+            }
+            // fall through
+          case 45: break;
+          case 23:
+            { return token("TYPE_INTEGER");
+            }
+            // fall through
+          case 46: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }
