@@ -1,4 +1,4 @@
-# Trabalho semestral da disciplina de compiladores
+# Trabalho semestral de Compiladores
 
 Desenvolvido por Lucas Faustino, Edson Bergamo, Caio Grandini e Gustavo Silvestre
 
