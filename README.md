@@ -1,6 +1,6 @@
 # Trabalho semestral da disciplina de compiladores
 
-Desenvolvido por Lucas Faustino, Edson Bergamo, Caio Saneti Grandini e Gustavo Silvestre
+Desenvolvido por Lucas Faustino, Edson Bergamo, Caio Grandini e Gustavo Silvestre
 
 Projeto de um fragmento de um compilador (em específico, as funcionalidades de Análise Léxica e Sintática) a partir de uma grámatica livre criada pelos desenvolvedores.
 
