@@ -1,0 +1,56 @@
+package src.parser;
+
+import java_cup.runtime.*;
+import java.util.*;
+import java.io.*;
+
+parser code {:
+
+    public void syntax_error(Symbol cur_token)  {
+        System.out.println("Erro de sintaxe: Linha: " + (cur_token.left + 1) + " Coluna: " + (cur_token.right + 1) + " Trecho que apresentou o problema: " + cur_token.value);  
+    	throw new Error("Erro de síntaxe");
+    } 	
+	public void unrecovered_syntax_error(Symbol cur_token) {
+	   System.out.println("Erro de sintaxe, porém o parser não conseguiu se recuperar! Linha: " + (cur_token.left + 1) + " Coluna: " + (cur_token.right + 1) + " Trecho que apresentou o problema: " + cur_token.value);  
+	   throw new Error("Erro de síntaxe");
+	}
+
+    public void printErroFatal(String message, Object info)  {
+        System.out.println("Erro Fatal - " + message);
+        System.exit(-1);
+    }
+
+:};
+
+
+terminal START, END, PRINT, WRITE, CLOSE_SEQUENCE, IDENT, OPEN, CLOSE;
+terminal TYPE_DECLARATION, TYPE_FLOAT, TYPE_INTEGER, TYPE_CHAR, TYPE_STRING;
+terminal EQUALS, SUM, SUB, MULTI, DIVID, NUM;
+
+non terminal program, statements, statement, variable, var_decl, var_type, print_var, write_var, mathematical_operators, mathematical_variables;
+non terminal mathematical_operations_single_operators, mathematical_operations_multiple_operators;
+
+start with program;
+
+program ::= START statements END CLOSE_SEQUENCE;
+
+statements ::= statements statement | statement;
+statement ::= var_decl | print_var | write_var | mathematical_operations_single_operators | mathematical_operations_multiple_operators;
+
+
+variable ::= IDENT;
+mathematical_variables ::= variable | NUM;
+mathematical_operators ::=  SUM | SUB | MULTI | DIVID;
+
+var_type ::=  TYPE_FLOAT | TYPE_INTEGER | TYPE_CHAR | TYPE_STRING;
+var_decl ::=  TYPE_DECLARATION var_type variable CLOSE_SEQUENCE;
+print_var ::= PRINT OPEN IDENT CLOSE CLOSE_SEQUENCE;
+write_var ::= WRITE OPEN IDENT CLOSE CLOSE_SEQUENCE;
+
+mathematical_operations_single_operators ::= variable EQUALS mathematical_variables mathematical_operators mathematical_variables CLOSE_SEQUENCE; 
+mathematical_operations_multiple_operators ::= variable EQUALS mathematical_variables mathematical_operators OPEN mathematical_variables mathematical_operators mathematical_variables CLOSE CLOSE_SEQUENCE;  
+
+
+
+
+ 
