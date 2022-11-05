@@ -15,6 +15,13 @@
 			<version>1.8.2</version>
 		</dependency>
 		
+			<!-- https://mvnrepository.com/artifact/edu.princeton.cup/java-cup -->
+		<dependency>
+			<groupId>edu.princeton.cup</groupId>
+			<artifactId>java-cup</artifactId>
+			<version>10k</version>
+		</dependency>
+		
 	</dependencies>
 
 </project>
