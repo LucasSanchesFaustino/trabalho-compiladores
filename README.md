@@ -9,5 +9,6 @@ Link da documentação do trabalho (Gramática e Autômatos desenvolvidos): http
 Este projeto foi desenvolvido inteiramente na linguagem Java e com a utilização das bibliotecas JFlex e JCUP.
 
 Link da documentação das bibliotecas utilizadas no projeto:
+
 https://jflex.de/manual.html
 https://www.cs.princeton.edu/~appel/modern/java/CUP/manual.html
