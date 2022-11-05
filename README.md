@@ -10,5 +10,5 @@ Este projeto foi desenvolvido inteiramente na linguagem Java e com a utilizaçã
 
 Link da documentação das bibliotecas utilizadas no projeto:
 
-https://jflex.de/manual.html
+https://jflex.de/manual.html <br/>
 https://www.cs.princeton.edu/~appel/modern/java/CUP/manual.html
