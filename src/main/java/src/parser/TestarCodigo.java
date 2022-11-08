@@ -8,23 +8,19 @@ import src.lexer.AnalisadorLexico;
 
 public class TestarCodigo {
 
-	public static void main(String[] args) throws FileNotFoundException {
-		String rootPath = Paths.get("").toAbsolutePath().toString();
-		String subPath = "/src/main/java/src/";
+	public static void main(String[] args) {
+		String path = Paths.get("").toAbsolutePath().toString() + "/src/main/java/src/";
 
-		String sourcecode = rootPath + subPath + "Teste.txt";
-		parser p = new parser(new AnalisadorLexico(new FileReader(sourcecode)));
-
-		
+		String sourcecode = path + "teste.txt";
+		parser p;
 		try {
+			p = new parser(new AnalisadorLexico(new FileReader(sourcecode)));
 			Object result = p.parse().value;
 			System.out.println("Código compilado com sucesso!");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
 		} catch (Exception e) {
-				System.out.println(); 
-				e.printStackTrace();
-
+			e.printStackTrace();
 		}
-
 	}
-
 }

@@ -1,6 +1,5 @@
-Start 
+Start
 Declare Float teste1;
 Print(teste1);
-Write(teste1);
-teste1 = 2 * (5 + 3); 54564
+teste1 = 2 * (5 + 3);
 End;
